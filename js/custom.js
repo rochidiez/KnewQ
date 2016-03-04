@@ -1,14 +1,11 @@
+// $(window).scroll(function() {
+//     if ($(".navbar").offset().top > 50) {
+//         $(".navbar-fixed-top").addClass("top-nav-collapse");
+//     } else {
+//         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+//     }
+// });
 
-
-
-$(window).scroll(function() {
-if ($(this).scrollTop() > 1){  
-    $('header').addClass("sticky");
-  }
-  else{
-    $('header').removeClass("sticky");
-  }
-});
 
 
 change_text = function(element) {

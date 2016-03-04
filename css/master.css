@@ -1,9 +1,14 @@
 
 body,html{
-    //overflow: hidden !important;
+    overflow: hidden !important;
+}
+.top-nav-collapse img{
+  display: block
 
 }
-
+.navbar .full{
+  display: none!important;
+}
 h1 {
   font-size: 45px!important;
 }
@@ -16,26 +21,12 @@ h2 {
   margin-top: 5%!important;
   opacity: .9;
 }
-.navbar.navbar-default {background-color: #ccc; 
-  margin-bottom: 0;
-  border: 0;}
-header.sticky .navbar.navbar-default {background-color: #000}
-/*
+/**/
 .icon-twitter-bird {
   font-size: 30px;
 }
 .icon-facebook-rect {
   font-size: 30px;
-}
-
-.top-nav-collapse {background-color: #ccc;}
-
-.top-nav-collapse img{
-  display: block
-
-}
-.navbar .full{
-  display: none!important;
 }
 .navbar-inverse .navbar-nav>li>a {
   color:#ffffff!important;
@@ -43,7 +34,7 @@ header.sticky .navbar.navbar-default {background-color: #000}
 .navbar-inverse .navbar-nav>li>a:hover{
   color:rgb(228, 226, 223)!important;
 }
-
+/*nab-bar*/
 .navbar-inverse {
 background-color: #f39c12!important;
 border-color: #f39c12!important;
@@ -63,7 +54,7 @@ border-color: #f39c12!important;
 .navbar-brand>img {
   width: 200px;
 }
-*/
+/**/
 
 
 .roll {
@@ -73,7 +64,7 @@ border-color: #f39c12!important;
   display: block;
 }
 * {
-  //background-color: #f39c12!important;*/
+  /*background-color: #f39c12!important;*/
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: Open Sans!important;
@@ -96,7 +87,6 @@ border-color: #f39c12!important;
     background: red;
 }
 /*section1*/
-#fullpage {background-color: #f39c12;}
 .scroll {
     font-size: 40px;
     position: fixed;
@@ -113,10 +103,7 @@ border-color: #f39c12!important;
     -moz-opacity: 1;
     -khtml-opacity: 1;
     opacity: 1;
-
 }
-.scroll img {width: 8%;
-  margin: 0 auto;}
 /*Data*/
 input.email {
   color: #0970b0;
@@ -251,9 +238,7 @@ input[type="submit"]:focus,
     margin-top: 5%!important;
     opacity: .9;
   }
-  .scroll img {width: 14%;}
 }
-
 
 /* Custom, iPhone Retina */
 
