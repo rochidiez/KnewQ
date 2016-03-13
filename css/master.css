@@ -18,9 +18,22 @@ h4 {
 }
 h2 {
   color: #0970b0!important;
-  margin-top: 5%!important;
+  margin-top: 5%;
   opacity: .9;
 }
+.loading {position: absolute;
+  width: 4%;
+  top: 5%;
+  right: 50%;}
+.loading img {width: 100%;}
+.socialatend {position: absolute;
+  top: 5%;
+  right: 5%;
+  display: none;
+  }
+.socialatend>li>a {color: #ffffff;}
+.fp-viewing-firstPage header {display: none;}
+.fp-viewing-secondPage-0 header {display: block;}
 /**/
 .icon-twitter-bird {
   font-size: 30px;
@@ -32,7 +45,7 @@ h2 {
   color:#ffffff!important;
 }
 .navbar-inverse .navbar-nav>li>a:hover{
-  color:rgb(228, 226, 223)!important;
+  opacity: .6;
 }
 /*nab-bar*/
 .navbar-inverse {
@@ -40,12 +53,13 @@ background-color: #f39c12!important;
 border-color: #f39c12!important;
 }
 .example3 .navbar-brand {
-  height: 80px;
+  height: 120px;
 }
 
 .example3 .nav >li >a {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-top: 16%;
 }
 .example3 .navbar-toggle {
   padding: 10px;
@@ -53,7 +67,10 @@ border-color: #f39c12!important;
 }
 .navbar-brand>img {
   width: 200px;
+  margin: 4% 0;
 }
+
+
 /**/
 
 
@@ -104,13 +121,18 @@ border-color: #f39c12!important;
     -khtml-opacity: 1;
     opacity: 1;
 }
+h2.get {margin-top: 13%;}
+.scroll img {width: 6%;}
+
 /*Data*/
+.data form {position: relative;}
+
 input.email {
   color: #0970b0;
   font: 300 21px OpenSans;
   border: 0px dashed #0970b0!important;
   border-bottom: 2px solid #0970b0!important;
-  margin: 10% 5% 10% 0;
+  margin: 5% 5% 10% 0;
   width: 357px;
 }
 ::-webkit-input-placeholder {
@@ -167,6 +189,17 @@ input[type="submit"]:focus,
 .center{
   margin-top:10%;
 }
+.modalEmail {position: absolute;
+  z-index: 2000;
+  display: none;
+  background-color: rgba(0,0,0,.5);
+}
+
+.modalEmail .modal-dialog {margin-top: 10%;}
+.modalEmail h4 {color: #0970b0; margin-top: 5%;}
+.modalEmail .modal-footer {border-top: 0;}
+
+
 
 /*==================================================
 =            Bootstrap 3 Media Queries             =
@@ -235,9 +268,10 @@ input[type="submit"]:focus,
   h2 {
     font-size: 15;
     color: #0970b0!important;
-    margin-top: 5%!important;
+    margin-top: 5%;
     opacity: .9;
   }
+  .scroll img {width: 14%;}
 }
 
 /* Custom, iPhone Retina */

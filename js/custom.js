@@ -1,13 +1,3 @@
-// $(window).scroll(function() {
-//     if ($(".navbar").offset().top > 50) {
-//         $(".navbar-fixed-top").addClass("top-nav-collapse");
-//     } else {
-//         $(".navbar-fixed-top").removeClass("top-nav-collapse");
-//     }
-// });
-
-
-
 change_text = function(element) {
   var $words = $(element),
     $total = $words.length - 1,
@@ -21,8 +11,10 @@ change_text = function(element) {
       $position = 0;
     } else {
       $position = $position + 1;
+        
     }
     $words.eq($position).addClass('active');
+
   };
   $timer = setInterval(autoSlide, 5000);
 };
@@ -30,17 +22,37 @@ change_text = function(element) {
 
 $(document).ready(function() {
   change_text('.change-text .roll');
+
+  $("#close").click(function() {
+            $(".modalEmail").removeClass("show");
+            $(".modalEmail").addClass("hide");
+        });
+
+
+  
+
 });
 
+
+
+
 (function() {    
-  $(".boton_envio").click(function() {         
+  $(".boton_envio").click(function() { 
+
+    
+
+
+            
     email = $(".email").val();            
     validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;                
     if (email == "" || !validacion_email.test(email)) {            
-      $(".email").focus();               
-      return false;                
+      $(".email").focus();
+       $('.modalEmail').addClass('show');         
+      return false;   
+                 
     } else {
       //Llamada AJAX
+      $('.loading').addClass('show');
       $('.ajaxgif').removeClass('hide');
       var datos = '&email=' + email;
       $.ajax({    
@@ -50,16 +62,31 @@ $(document).ready(function() {
             success: function() {        
           // alert("HE enviado");
           // console.log(email)
+
           location.hash = "#secondPage/1";
+
+
+          setTimeout(function(){
+            location.hash = "#firstPage";
+            $('.bounce').addClass('hide');
+            $('#section1').addClass('hide');
+            $('header').addClass('hide');
+            $('.socialatend').addClass('show');
+          },3000);
         },
-            error: function() {        
+            error: function() {     
           $('.ajaxgif').hide();        
           $('.msg').text('Hubo un error!').addClass('msg_error').animate({
             'right': '130px'
           }, 300);                    
         }
       });
-      return false;        
-    }     
+      return false; 
+
+
+      
+    }
+
+        
   });
 })();
