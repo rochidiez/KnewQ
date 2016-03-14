@@ -41,9 +41,12 @@ h2 {
 .icon-facebook-rect {
   font-size: 30px;
 }
+
 .navbar-inverse .navbar-nav>li>a {
   color:#ffffff!important;
 }
+.navbar-nav>li>a:hover {background-color: transparent;
+  opacity: .6;}
 .navbar-inverse .navbar-nav>li>a:hover{
   opacity: .6;
 }
