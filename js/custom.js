@@ -38,6 +38,8 @@ $(document).ready(function() {
 
 (function() {    
   $(".boton_envio").click(function() { 
+    
+    $('.slideTwo').removeClass('hide');
 
     
 
@@ -62,6 +64,7 @@ $(document).ready(function() {
             success: function() {        
           // alert("HE enviado");
           // console.log(email)
+
 
           location.hash = "#secondPage/1";
 
