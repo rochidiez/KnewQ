@@ -3,7 +3,8 @@
 if(isset($_POST['email'])) {
 
     // CHANGE THE TWO LINES BELOW
-    $email_to = "SeparatingFoxesFromHedgehogs@gmail.com";
+    $email_to = "separatingfoxesfromhedgehogs@gmail.com";
+  
 
     $email_subject = "Contact to Landing Page";
 

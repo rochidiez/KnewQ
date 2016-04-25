@@ -38,24 +38,18 @@ $(document).ready(function() {
 
 (function() {    
   $(".boton_envio").click(function() { 
-    
-    $('.slideTwo').removeClass('hide');
-
-    
-
-
-            
     email = $(".email").val();            
     validacion_email = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;                
     if (email == "" || !validacion_email.test(email)) {            
-      $(".email").focus();
-       $('.modalEmail').addClass('show');         
+ 
+       $('.modalEmail').addClass('show');  
       return false;   
                  
     } else {
       //Llamada AJAX
       $('.loading').addClass('show');
       $('.ajaxgif').removeClass('hide');
+
       var datos = '&email=' + email;
       $.ajax({    
         type: "POST",
@@ -67,11 +61,13 @@ $(document).ready(function() {
 
 
           location.hash = "#secondPage/1";
+          $('.slideTwo').removeClass('hide');
 
 
           setTimeout(function(){
             location.hash = "#firstPage";
             $('.bounce').addClass('hide');
+            $('.slideTwo').addClass('hide');
             $('#section1').addClass('hide');
             $('header').addClass('hide');
             $('.socialatend').addClass('show');
